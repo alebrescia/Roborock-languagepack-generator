@@ -9,10 +9,27 @@ Un generatore generico di pacchetti vocali `.pkg` per **Xiaomi Mi Robot Vacuum (
 - Python 3.8+
 - `ffmpeg` installato nel sistema
 
+## Installazione 
+### Clona il repository ed entra nella cartella:
+```bash
+git clone https://github.com/alebrescia/Roborock-languagepack-generator.git
+cd Roborock-languagepack-generator
+```
 ### Installazione Dipendenze
 ```bash
+# Installa i pacchetti necessari (FFmpeg è indispensabile per la conversione WAV 16kHz)
+sudo apt update && sudo apt install -y ffmpeg python3-venv git
+
+# Crea e attiva l'ambiente virtuale Python
+python3 -m venv venv
+source venv/bin/activate
+
+# Installa la libreria di sintesi vocale
 pip install edge-tts
-sudo apt-get install -y ffmpeg
+```
+### Permessi di esecuzione file
+```bash
+chmod +x build.sh
 ```
 ### Uso Rapido
 Modifica o sostituisci il file audio.csv inserendo le frasi tradotte nella tua lingua.
