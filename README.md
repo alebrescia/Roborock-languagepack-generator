@@ -13,3 +13,15 @@ Un generatore generico di pacchetti vocali `.pkg` per **Xiaomi Mi Robot Vacuum (
 ```bash
 pip install edge-tts
 sudo apt-get install -y ffmpeg
+
+### Uso Rapido
+Modifica o sostituisci il file audio.csv inserendo le frasi tradotte nella tua lingua.
+Esegui lo script di build specificando Voce, File CSV e Nome output:
+./build.sh <VOCE_EDGE_TTS> <FILE_CSV> <NOME_OUTPUT>
+ESEMPI:
+./build.sh "it-IT-IsabellaNeural" "audio.csv" "italian_isabella"
+./build.sh "en-US-AvaNeural" "audio_en.csv" "english_ava"
+./build.sh "de-DE-KillianNeural" "audio_de.csv" "german_killian"
+
+### Lista Voci disponibili
+edge-tts --list-voices
