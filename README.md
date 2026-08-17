@@ -1,4 +1,71 @@
-Basato su <a href="https://github.com/arner/roborock-glados">roborock glados</a> di <a href="https://github.com/arner">Arner</a>
+# EN
+#### Based on <a href="https://github.com/arner/roborock-glados">roborock glados</a> by <a href="https://github.com/arner">Arner</a>
+
+# Roborock Language Pack Generator
+
+A generic `.pkg` voice pack generator for **Xiaomi Mi Robot Vacuum (Gen1)** and **Roborock** devices, based on high-quality neural speech synthesis from **Microsoft Edge Neural TTS**.
+
+## Prerequisites
+
+- Python 3.8+
+- `ffmpeg` 
+- `ccrypt`
+
+## Installation 
+### Clone the repository and enter the folder:
+```bash
+git clone https://github.com/alebrescia/Roborock-languagepack-generator.git
+cd Roborock-languagepack-generator
+```
+### Installing Dependencies
+```bash
+# Install required packages (FFmpeg is essential for 16kHz WAV conversion)
+sudo apt update && sudo apt install -y ffmpeg python3-venv git && sudo apt install -y ccrypt
+
+# Create and activate the Python virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install the speech synthesis library
+pip install edge-tts
+```
+### File Execution Permissions
+```bash
+chmod +x build.sh
+```
+### Quick Usage
+Edit or replace the audio.csv file with the translated phrases in your language.
+Run the build script specifying Voice, CSV File, and Output Name:
+```bash
+./build.sh <EDGE_TTS_VOICE> <CSV_FILE> <OUTPUT_PKG_NAME>
+```
+EXAMPLES:
+```bash
+./build.sh "it-IT-IsabellaNeural" "audio_ita.csv" "italian_isabella"
+./build.sh "en-US-AvaNeural" "audio.csv" "english_ava"
+./build.sh "de-DE-KillianNeural" "audio_de.csv" "german_killian"
+```
+### List of Available Voices
+```bash
+edge-tts --list-voices
+```
+### Result
+Upon completion of the script execution, the pkg to be used in the roborock will be created, accompanied by the file hash calculation 
+(Visible in the console and saved in the "dist" folder)
+
+### On-the-fly Web Server Creation
+```bash
+python3 -m http.server 8000
+```
+Link to use in Valetudo
+```bash
+http://<YOUR_IP>:8000/dist/<PACKAGE_NAME>.pkg
+```
+
+
+
+# ITA
+#### Basato su <a href="https://github.com/arner/roborock-glados">roborock glados</a> di <a href="https://github.com/arner">Arner</a>
 
 # Roborock Language Pack Generator
 
