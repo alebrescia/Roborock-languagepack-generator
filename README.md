@@ -1,4 +1,4 @@
-Basato sul roborock glados (https://github.com/arner/roborock-glados) di Arner (https://github.com/arner) 
+Basato su <a href="https://github.com/arner/roborock-glados">roborock glados</a> di <a href="https://github.com/arner">Arner</a>
 
 # Roborock Language Pack Generator
 
@@ -39,8 +39,8 @@ Esegui lo script di build specificando Voce, File CSV e Nome output:
 ```
 ESEMPI:
 ```bash
-./build.sh "it-IT-IsabellaNeural" "audio.csv" "italian_isabella"
-./build.sh "en-US-AvaNeural" "audio_en.csv" "english_ava"
+./build.sh "it-IT-IsabellaNeural" "audio_ita.csv" "italian_isabella"
+./build.sh "en-US-AvaNeural" "audio.csv" "english_ava"
 ./build.sh "de-DE-KillianNeural" "audio_de.csv" "german_killian"
 ```
 ### Lista Voci disponibili
