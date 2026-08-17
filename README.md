@@ -18,7 +18,7 @@ cd Roborock-languagepack-generator
 ### Installazione Dipendenze
 ```bash
 # Installa i pacchetti necessari (FFmpeg è indispensabile per la conversione WAV 16kHz)
-sudo apt update && sudo apt install -y ffmpeg python3-venv git
+sudo apt update && sudo apt install -y ffmpeg python3-venv git && sudo apt install -y ccrypt
 
 # Crea e attiva l'ambiente virtuale Python
 python3 -m venv venv
