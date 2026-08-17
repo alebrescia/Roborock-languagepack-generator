@@ -1,2 +1,3 @@
-.DS_Store
-output
+echo "venv/" > .gitignore
+echo "output/speech/*.mp3" >> .gitignore
+echo "__pycache__/" >> .gitignore
