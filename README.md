@@ -7,7 +7,8 @@ Un generatore generico di pacchetti vocali `.pkg` per **Xiaomi Mi Robot Vacuum (
 ## Prerequisiti
 
 - Python 3.8+
-- `ffmpeg` installato nel sistema
+- `ffmpeg` 
+- `ccrypt`
 
 ## Installazione 
 ### Clona il repository ed entra nella cartella:
