@@ -35,7 +35,7 @@ chmod +x build.sh
 Modifica o sostituisci il file audio.csv inserendo le frasi tradotte nella tua lingua.
 Esegui lo script di build specificando Voce, File CSV e Nome output:
 ```bash
-./build.sh <VOCE_EDGE_TTS> <FILE_CSV> <NOME_OUTPUT>
+./build.sh <VOCE_EDGE_TTS> <FILE_CSV> <NOME_PKG_OUTPUT>
 ```
 ESEMPI:
 ```bash
@@ -46,4 +46,16 @@ ESEMPI:
 ### Lista Voci disponibili
 ```bash
 edge-tts --list-voices
+```
+### Risultato
+Al termine dell' esecuzione dello script, verrà creato il pkg da usare nel roborock corredato da calcolo hash del file 
+(Visibile in console e presente nella cartella "dist" )
+
+### Creazione webserver "al volo"
+```bash
+python3 -m http.server 8000
+```
+Link da usare in valetudo
+```bash
+http://<IL TUO IP>:8000/dist/<PACKAGE_NAME>.pkg
 ```
