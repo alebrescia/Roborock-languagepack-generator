@@ -22,7 +22,7 @@ cd ../..
 
 echo "=== 3. Cifratura CCRYPT (chiave: cleaner) ==="
 # Cifra il file creando dist/${OUTPUT_NAME}.tar.gz.cpt
-ccrypt -e -K "cleaner" "dist/${OUTPUT_NAME}.tar.gz"
+ccrypt -e -K "r0ckrobo#23456" "dist/${OUTPUT_NAME}.tar.gz"
 
 # Rinomina il file cifrato .cpt nell'estensione finale .pkg
 mv "dist/${OUTPUT_NAME}.tar.gz.cpt" "dist/${OUTPUT_NAME}.pkg"
